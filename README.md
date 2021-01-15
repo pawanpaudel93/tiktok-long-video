@@ -10,12 +10,12 @@ A useful package/tool to make webm videos greater than 60s in length uploadable 
 You can use as cli tool.
 For help,
 ```python
-tlv -h
+ttlv -h
 ```
 
 Input filepath is must and output filepath is optional. For saving tiktok long video,
 ```python
-tlv -i "/home/user/Desktop/sample.webm" -o "/home/user/Desktop/sample-tlv.webm"
+ttlv -i "/home/user/Desktop/sample.webm" -o "/home/user/Desktop/sample-ttlv.webm"
 ```
 
 OR
@@ -23,9 +23,9 @@ OR
 You can import and use in your programs. 
 output_path is optional.
 ```python
-from tlv import Video
+from ttlv import Video
 
-video = Video(input_path="./sample.webm", output_path="./sample-tlv.webm")
+video = Video(input_path="./sample.webm", output_path="./sample-ttlv.webm")
 video.save()
 ```
 

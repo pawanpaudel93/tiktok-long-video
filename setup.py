@@ -6,7 +6,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = "tlv"
+NAME = "ttlv"
 DESCRIPTION = "A useful cli tool to make webm videos uploadable greater than 60s in length."
 URL = "https://github.com/pawanpaudel93/tiktok-long-video"
 EMAIL = "pawanpaudel93@gmail.com"
@@ -82,10 +82,10 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    packages=["tlv"],
+    packages=["ttlv"],
     entry_points={
         'console_scripts': [
-            'tlv = tlv.cli:main'
+            'ttlv = ttlv.cli:main'
         ]
     },
     license="MIT",
@@ -100,7 +100,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Operating System :: OS Independent",
     ],
-    keywords ='tlv tiktok-long-video',
+    keywords ='ttlv tiktok-long-video',
     zip_safe = False,
     # $ setup.py publish support.
     cmdclass={

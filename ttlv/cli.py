@@ -2,7 +2,7 @@ import logging
 import argparse
 import os
 
-from tlv import Video
+from ttlv import Video
 
 __version__ = "0.0.1"
 
@@ -11,7 +11,7 @@ def main():
     description = 'This package/cli tool saves webm video to upload Tiktok long videos above 60 seconds. Accepts video filepath and output video filepath.'
     parser = argparse.ArgumentParser(
         description=description,
-        prog='tlv',
+        prog='ttlv',
         usage='%(prog)s [arguments]',
         allow_abbrev=False,
     )
