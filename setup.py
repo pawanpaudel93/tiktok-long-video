@@ -85,7 +85,7 @@ setup(
     packages=["tlv"],
     entry_points={
         'console_scripts': [
-            'tlv = tlv.tlv:main'
+            'tlv = tlv.cli:main'
         ]
     },
     license="MIT",
