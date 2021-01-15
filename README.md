@@ -1,11 +1,18 @@
 <h1 align="center">Welcome to tiktok-long-video</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.2-blue.svg?cacheSeconds=2592000" />
 </p>
 
 A useful package/tool to make webm videos greater than 60s in length uploadable to TikTok.
 
+## Proof
+
+  This video [https://www.tiktok.com/@harrynepal26/video/6917917976008183042](https://www.tiktok.com/@harrynepal26/video/6917917976008183042 "https://www.tiktok.com/@harrynepal26/video/6917917976008183042") is actually 2 Minutes 45 Seconds long.
+  You can download this video using [govue-tiktok-downloader](https://github.com/pawanpaudel93/govue-tiktok-downloader "govue-tiktok-downloader") to confirm that video is more than 60 seconds long.
+
 ## Usage
+
+To upload longer videos than 60 seconds, first you must have a webm video file or you can convert the video to webm using online or offline tools and you have to save using below commands and upload via Tiktok web not mobile app.
 
 You can use as cli tool.
 For help,
