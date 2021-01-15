@@ -8,7 +8,7 @@ __version__ = "0.0.1"
 
 
 def main():
-    description = 'This package saves webm video to upload Tiktok long videos above 60 seconds. Accepts video filename/filepath and output video name/filepath.'
+    description = 'This package/cli tool saves webm video to upload Tiktok long videos above 60 seconds. Accepts video filepath and output video filepath.'
     parser = argparse.ArgumentParser(
         description=description,
         prog='tlv',
@@ -16,8 +16,8 @@ def main():
         allow_abbrev=False,
     )
     parser.add_argument("-v", "--version", help="show package version", action='version', version='%(prog)s {version}'.format(version=__version__))
-    parser.add_argument('-i', '--input', help='Video filename/filepath')
-    parser.add_argument('-o', '--output', help='Output video filename/filepath', type=str, default="")
+    parser.add_argument('-i', '--input', help='Input Video filepath')
+    parser.add_argument('-o', '--output', help='Output video filepath', type=str, default="")
 
     args = parser.parse_args()
     input_path = args.input
@@ -30,7 +30,7 @@ def main():
     elif input_path and "webm" not in input_path.lower():
         logging.error("It is not a webm video file.")
     else:
-        logging.error("No input or output filename/filepath provided.")
+        logging.error("No input or output filepath provided.")
 
 if __name__ == "__main__":
     main()
