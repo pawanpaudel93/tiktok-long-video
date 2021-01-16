@@ -1,9 +1,14 @@
 <h1 align="center">Welcome to tiktok-long-video</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.2-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.3-blue.svg?cacheSeconds=2592000" />
 </p>
 
-A useful package/tool to make webm videos greater than 60s in length uploadable to TikTok.
+A useful package/tool to make webm/mp4 videos greater than 60s in length uploadable to TikTok.
+
+## Installation
+```bash
+pip install ttlv
+```
 
 ## Proof
 
@@ -12,16 +17,16 @@ A useful package/tool to make webm videos greater than 60s in length uploadable 
 
 ## Usage
 
-To upload longer videos than 60 seconds, first you must have a webm video file or you can convert the video to webm using online or offline tools and you have to save using below commands and upload via Tiktok web not mobile app.
+To upload longer videos than 60 seconds, first you must have a webm/mp4 video file or you can convert the video to webm/mp4 using online or offline tools and you have to save using below commands and upload via Tiktok web not mobile app.
 
 You can use as cli tool.
 For help,
-```python
+```bash
 ttlv -h
 ```
 
 Input filepath is must and output filepath is optional. For saving tiktok long video,
-```python
+```bash
 ttlv -i "/home/user/Desktop/sample.webm" -o "/home/user/Desktop/sample-ttlv.webm"
 ```
 
@@ -32,7 +37,7 @@ output_path is optional.
 ```python
 from ttlv import Video
 
-video = Video(input_path="./sample.webm", output_path="./sample-ttlv.webm")
+video = Video(input_path="./sample.mp4", output_path="./sample-ttlv.mp4")
 video.save()
 ```
 
