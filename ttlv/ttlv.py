@@ -6,9 +6,9 @@ logging.basicConfig(level=logging.ERROR, format='%(levelname)s - %(message)s')
 
 class Video:
 
-    def __init__(self, input_path: str, output_path: str=""):
+    def __init__(self, input_path: str= "", output_path: str=""):
         self.input_path = input_path
-        self.output_path = output_path if output_path else re.compile(".webm", re.IGNORECASE).sub("-ttlv.webm", input_path)
+        self.output_path = output_path
         self._hexdata = b""
     
     def _get_extension(self):
@@ -35,15 +35,23 @@ class Video:
         return True
 
     def save(self):
-        with open(self.input_path, "rb") as input_file:
-            self._hexdata = binascii.hexlify(input_file.read())
-        extension = self._get_extension()
-        if extension == "mp4":
-            is_modified = self._modify_mp4()
+        is_modified = False
+        try:
+            with open(self.input_path, "rb") as input_file:
+                self._hexdata = binascii.hexlify(input_file.read())
+        except FileNotFoundError:
+            logging.error("File Does Not Exist.")
         else:
-            is_modified = self._modify_webm()
-        if is_modified:
-            with open(self.output_path, "wb") as f:
-                f.write(binascii.unhexlify(self._hexdate))
-        else:
-            logging.error("Video cannot be saved as TikTok long video.")
+            extension = self._get_extension()
+            if extension == "mp4":
+                is_modified = self._modify_mp4()
+            elif extension == "webm":
+                is_modified = self._modify_webm()
+            if is_modified:
+                if not self.output_path:
+                    regex = re.compile(".%s"%extension, re.IGNORECASE)
+                    self.output_path = regex.sub("-ttlv.%s"%extension, self.input_path)
+                with open(self.output_path, "wb") as f:
+                    f.write(binascii.unhexlify(self._hexdate))
+            else:
+                logging.error("Video cannot be saved as TikTok long video.")
