@@ -16,13 +16,15 @@ class Video:
     
     def _modify_webm(self):
         try:
-            index = self._hexdata.index(b"4489")
+            index1 = self._hexdata.index(b"2ad7b1")
+            index2 = self._hexdata[index1:].index(b"4489")
+            index = index1 + index2
         except ValueError:
             return
         else:
             if index != -1:
                 self._hexdate  = self._hexdata[:index+4] + b"8840B07DB000" + self._hexdata[index+4+12:]
-        return True
+                return True
     
     def _modify_mp4(self):
         try:
@@ -31,8 +33,8 @@ class Video:
             return
         else:
             if index != -1:
-                self._hexdate  = self._hexdata[:index+24+8] + b"000003E800003A98"  + self._hexdata[index+24+8+16:]
-        return True
+                self._hexdate  = self._hexdata[:index+24+8] + b"000003E800001388"  + self._hexdata[index+24+8+16:]
+                return True
 
     def save(self):
         is_modified = False
