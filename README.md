@@ -9,6 +9,10 @@ A useful package/tool to make webm/mp4 videos greater than 60s in length uploada
 ```bash
 pip install ttlv
 ```
+## Web Application
+You can also use the web app deployed on heroku if you don't want to install it. Link to repo: [longify-tiktok](https://github.com/pawanpaudel93/longify-tiktok)
+
+Link to web app: [LongifyTikTok](https://longifytiktok.herokuapp.com)
 
 ## Proof
 
