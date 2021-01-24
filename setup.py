@@ -12,7 +12,7 @@ URL = "https://github.com/pawanpaudel93/tiktok-long-video"
 EMAIL = "pawanpaudel93@gmail.com"
 AUTHOR = "Pawan Paudel"
 REQUIRES_PYTHON = ">=3.0"
-VERSION = "0.5.0"
+VERSION = "0.6.0"
 
 here = os.path.abspath(os.path.dirname(__file__))
 

@@ -1,6 +1,8 @@
+<p align="center"><img src="https://raw.githubusercontent.com/pawanpaudel93/tiktok-long-video/main/ttlv.png" alt="original" width="250" height="250"></p>
+
 <h1 align="center">Welcome to tiktok-long-video</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.5.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.6.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
 A useful package/tool to make webm/mp4 videos greater than 60s in length uploadable to TikTok.
